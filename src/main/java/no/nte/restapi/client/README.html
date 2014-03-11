@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+    <!--
+       Copyright (C) 2014 DemoSteinkjer
+
+       Licensed under the Apache License, Version 2.0 (the "License");
+       you may not use this file except in compliance with the License.
+       You may obtain a copy of the License at
+
+           http://www.apache.org/licenses/LICENSE-2.0
+
+       Unless required by applicable law or agreed to in writing, software
+       distributed under the License is distributed on an "AS IS" BASIS,
+       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+       See the License for the specific language governing permissions and
+       limitations under the License.
+    -->
+</head>
+<body>
+
+<p>
+    This package contains example-code for DemoSteinkjer Rest-API, to get you starting.
+    You need: java and maven installed
+
+    How to run:
+<pre>
+    mvn clean install
+</pre>
+<pre>java -jar restapi-generic-client-0.1-SNAPSHOT-executable.jar -u &lt;username&gt; -p &lt;password&gt; -K d6d01d193a0a4b07ac835e9c67f16b8e -f 2014-03-02 -t 2014-03-02 -F application/json</pre>
+Username and password can be obtained from <a href="https://demosteinkjer.no/">DemoSteinkjer</a>
+The output is the meterreading in jsonformat for meter "d6d01d193a0a4b07ac835e9c67f16b8e", on 2014-03-02. For more possible parameters, see ApiExampleDownloader.java
+
+</p>
+<p>
+    The basis-class is the HypermediaClient, which is a general purpose client, that has methods to click links and submit forms (i.e act as an (xhtml)-browser).
+    This is used by the DownloadMeterReadingClient to order a specific timeseries with readings for a meter or set of meters, depending on given parameters.
+    ApiExampleDownloader is just the main class, with parameter parsing and parameter defaults. It just prints out the data obtained.
+    Feel free to use this as a starting point for your own client.
+</p>
+
+</body>
+</html>
