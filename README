@@ -8,7 +8,7 @@ a concrete example of how to build a client against https://api.demosteinkjer.no
     How to run:
     mvn clean install
     cd target
-    java -jar restapi-generic-client-0.1-SNAPSHOT-executable.jar -u &lt;username&gt; -p &lt;password&gt; -K d6d01d193a0a4b07ac835e9c67f16b8e -f 2014-03-02 -t 2014-03-02 -F application/json</pre>
+    java -jar restapi-generic-client-0.1-SNAPSHOT-executable.jar -u <username> -p <password> -K d6d01d193a0a4b07ac835e9c67f16b8e -f 2014-03-02 -t 2014-03-02 -F application/json</pre>
 
 Username and password can be obtained from https://demosteinkjer.no
 The output is the meterreading in jsonformat for meter "d6d01d193a0a4b07ac835e9c67f16b8e", on 2014-03-02. For more possible parameters, see ApiExampleDownloader.java
