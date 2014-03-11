@@ -1,8 +1,6 @@
 package no.nte.restapi.client.params;
 
-/**
- * @author sjur.kvammen
- */
+
 public class ClientParams {
     private String hostname;
     private int port = -1;

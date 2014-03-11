@@ -6,9 +6,7 @@ import org.joda.time.format.DateTimeFormatterBuilder;
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- * @author sjur.kvammen
- */
+
 public class DownloadParams {
 
 
