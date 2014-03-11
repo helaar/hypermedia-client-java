@@ -1,12 +1,21 @@
-This library provides a foundation for building XHTML hypermedia API
-clients. The major notion of a hypermedia API is that clients start from
-a known entry-point URL and proceed to use the API by following links and
-submitting forms--exactly the way humans do when they use the web. This
-style of API provides a lot of server-side flexibility in terms of
-controlling its own URL space, since clients never construct URLs
-themselves. Instead, clients construct their HTTP requests by following the
-existing, standardized semantics for HTTP <a> and <form> elements, which
-means the mechanisms for those requests are under the server's control.
+This code builds on https://github.com/cimlabs/hypermedia-client-java to give
+a concrete example of how to build a client against https://api.demosteinkjer.no
 
-See also the "Hypermedia APIs" talk given by Jon Moore at Øredev 2010:
-http://oredev.org/2010/sessions/hypermedia-apis
+
+    This package contains example-code for DemoSteinkjer Rest-API, to get you starting.
+    You need: java and maven installed
+
+    How to run:
+    mvn clean install
+    cd target
+    java -jar restapi-generic-client-0.1-SNAPSHOT-executable.jar -u &lt;username&gt; -p &lt;password&gt; -K d6d01d193a0a4b07ac835e9c67f16b8e -f 2014-03-02 -t 2014-03-02 -F application/json</pre>
+
+Username and password can be obtained from https://demosteinkjer.no
+The output is the meterreading in jsonformat for meter "d6d01d193a0a4b07ac835e9c67f16b8e", on 2014-03-02. For more possible parameters, see ApiExampleDownloader.java
+
+The basis-class is the HypermediaClient, which is a general purpose client, that has methods to click links and submit forms (i.e act as an (xhtml)-browser).
+This is used by the DownloadMeterReadingClient to order a specific timeseries with readings for a meter or set of meters, depending on given parameters.
+ApiExampleDownloader is just the main class, with parameter parsing and parameter defaults. It just prints out the data obtained.
+Feel free to use this as a starting point for your own client.
+
+
